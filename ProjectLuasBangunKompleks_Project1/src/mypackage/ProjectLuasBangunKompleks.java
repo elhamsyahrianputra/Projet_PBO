@@ -26,7 +26,7 @@ public class ProjectLuasBangunKompleks {
         double luasLingkaran = L.hitungLuas(21)/2;
         
         // Menghitung total Luas
-        double totalLuas = 4 * luasLingkaran;
+        double totalLuas = 4 * luasLingkaran + luasPersegi;
         System.out.println("TotaL luas dari bangun datar tersebut adalah: " + totalLuas);
                
     }
