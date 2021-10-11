@@ -16,14 +16,17 @@ public class ProjectLuasBangunKompleks {
      */
     
     public static void main(String[] args) {
+        
+        // Definisikan panjang sisi
+        int sisi = 42;
 
         // Hitung luas Persegi
         Persegi p = new Persegi();
-        int luasPersegi = p.hitungLuas(42);
+        int luasPersegi = p.hitungLuas(sisi);
 
         // hitung luas setengah lingkaran;
         Lingkaran L = new Lingkaran();
-        double luasLingkaran = L.hitungLuas(21)/2;
+        double luasLingkaran = L.hitungLuas(sisi/2)/2;
         
         // Menghitung total Luas
         double totalLuas = 4 * luasLingkaran + luasPersegi;
