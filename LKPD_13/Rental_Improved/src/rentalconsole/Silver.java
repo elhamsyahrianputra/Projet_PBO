@@ -14,20 +14,47 @@ import java.time.LocalDate;
 public class Silver extends Membership{
     
     // Attribute
-        int biayaSewa;
-        double discount;
-        int point = 1;
+        private int biayaSewa;
+        private double discount;
+        private int point;
         
+    public void setBiayaSewa(int biaya) {
+            this.biayaSewa = biaya;
+        }
     
+    public int getBiayaSewa() {
+            return this.biayaSewa;
+        }
+    
+    public void setDiscount(double data) {
+            this.discount = data;
+        }
+    
+    public double getDiscount() {
+            return this.discount;
+        }
+    
+    public void setPoint(int data) {
+            this.point = data;
+        }
+    
+    public double getPoint() {
+            return this.point;
+        }
+        
+        
     // Constractor
         public Silver(String id, String nama, String jenis, LocalDate pinjam, LocalDate kembali) {
             super(id, nama, jenis, pinjam, kembali);
-            this.biayaSewa = 25000;
-            this.discount = 0.001;
+            this.setBiayaSewa(25000);
+            this.setDiscount(0.001);
+            this.setPoint(1);
         }
         
         
     // Method
+        
+        
         // Method untuk menghitung jumlah biaya sewa berdasarkan lama waktu peminjaman.
         private int hitungSewa() { 
             int sewa = this.lamaSewa();
@@ -56,12 +83,12 @@ public class Silver extends Membership{
          // Method untuk menampilkan data member, data peminjaman, serta rincia biaya
         void tampilData() {
             System.out.println(
-                "ID Member : " + this.idMember + "\n" +
-                "Nama Member : " + this.namaMember + "\n" +
-                "Jenis Member : " + this.jenisMember + "\n" +
+                "ID Member : " + this.getID() + "\n" +
+                "Nama Member : " + this.getNama() + "\n" +
+                "Jenis Member : " + this.getJenis() + "\n" +
                 "\n" +
-                "Tanggal Pinjam : " + this.tglPinjam.getDayOfMonth() + "-" + this.tglPinjam.getMonthValue() + "-" + this.tglPinjam.getYear() +  "\n" +
-                "Tanggal Kembali : " + this.tglKembali + "\n" +
+                "Tanggal Pinjam : " + this.getTglPinjam().getDayOfMonth() + "-" + this.getTglPinjam().getMonthValue() + "-" + this.getTglPinjam().getYear() +  "\n" +
+                "Tanggal Kembali : " + this.getTglKembali().getDayOfMonth() + "-" + this.getTglKembali().getMonthValue() + "-" + this.getTglKembali().getYear() +  "\n" +
                 "Lama Sewa : " + this.lamaSewa() + " Hari \n" +
                 "\n" +
                 "Total Sewa : Rp. " + this.totalSewa() + "\n" +

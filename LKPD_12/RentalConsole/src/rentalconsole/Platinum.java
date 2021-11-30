@@ -22,6 +22,7 @@ public final class Platinum extends Gold{
             super(id, nama, jenis, pinjam, kembali);
             this.biayaSewa = 45000;
             this.discount = 0.003;
+            this.point = 10;
             this.cashback = 10000;
             this.pulsa = 5000;
         }

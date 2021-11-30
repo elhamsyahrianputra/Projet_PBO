@@ -16,7 +16,7 @@ public class Silver extends Membership{
     // Attribute
         int biayaSewa;
         double discount;
-        int point = 1;
+        int point;
         
     
     // Constractor
@@ -24,6 +24,7 @@ public class Silver extends Membership{
             super(id, nama, jenis, pinjam, kembali);
             this.biayaSewa = 25000;
             this.discount = 0.001;
+            this.point = 1;
         }
         
         

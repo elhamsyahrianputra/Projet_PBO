@@ -21,6 +21,7 @@ public class Gold extends Silver{
             super(id, nama, jenis, pinjam, kembali);
             this.biayaSewa = 30000;
             this.discount = 0.002;
+            this.point = 5;
             this.cashback = 5000;
         }
     

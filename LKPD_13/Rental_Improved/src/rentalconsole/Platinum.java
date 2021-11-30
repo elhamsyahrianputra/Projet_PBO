@@ -14,16 +14,24 @@ import java.time.LocalDate;
 public final class Platinum extends Gold{
     
     // Attribute
-        int pulsa;
+        private int pulsa;
     
+        public void setPulsa(int data) {
+            this.pulsa = data;
+        }
+        
+        public int getPulsa(int data) {
+            return this.pulsa;
+        }
         
     // Constractor
         public Platinum(String id, String nama, String jenis, LocalDate pinjam, LocalDate kembali) {
             super(id, nama, jenis, pinjam, kembali);
-            this.biayaSewa = 45000;
-            this.discount = 0.003;
-            this.cashback = 10000;
-            this.pulsa = 5000;
+            this.setBiayaSewa(45000);
+            this.setDiscount(0.003);
+            this.setCashback(10000);
+            this.setPulsa(5000);
+            this.setPoint(10);
         }
         
         
@@ -36,17 +44,17 @@ public final class Platinum extends Gold{
          // Method untuk menampilkan data member, data peminjaman serta rincian biaya
         void tampilData() {
             System.out.println(
-                "ID Member : " + this.idMember + "\n" +
-                "Nama Member : " + this.namaMember + "\n" +
-                "Jenis Member : " + this.jenisMember + "\n" +
+                "ID Member : " + this.getID() + "\n" +
+                "Nama Member : " + this.getNama() + "\n" +
+                "Jenis Member : " + this.getJenis() + "\n" +
                 "\n" +
-                "Tanggal Pinjam : " + this.tglPinjam.getDayOfMonth() + "-" + this.tglPinjam.getMonthValue() + "-" + this.tglPinjam.getYear() +  "\n" +
-                "Tanggal Kembali : " + this.tglKembali.getDayOfMonth() + "-" + this.tglKembali.getMonthValue() + "-" + this.tglKembali.getYear() +  "\n" +
+                "Tanggal Pinjam : " + this.getTglPinjam().getDayOfMonth() + "-" + this.getTglPinjam().getMonthValue() + "-" + this.getTglPinjam().getYear() +  "\n" +
+                "Tanggal Kembali : " + this.getTglKembali().getDayOfMonth() + "-" + this.getTglKembali().getMonthValue() + "-" + this.getTglKembali().getYear() +  "\n" +
                 "Lama Sewa : " + this.lamaSewa() + " Hari \n" +
                 "\n" +
                 "Total Sewa : Rp. " + this.totalSewa() + "\n" +
                 "Jumlah Point : " + this.totalPoint() + "\n" +
-                "Jumlah Cashback Rp. : " + this.cashback + "\n" +
+                "Jumlah Cashback Rp. : " + this.getCashback() + "\n" +
                 "Bonus Pulsa : Rp." + this.totalPulsa()
             );
         }
