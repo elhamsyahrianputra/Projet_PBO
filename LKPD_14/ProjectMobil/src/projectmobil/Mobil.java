@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bangundatar;
+package projectmobil;
 
 /**
  *
  * @author Asus
  */
-public class ProjectBangun {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public abstract class Mobil {
+    
+    // Attribute
+    
+    public abstract double hitungBahanBakar();
+    public abstract double hitungWaktuTempuh();
     
 }
