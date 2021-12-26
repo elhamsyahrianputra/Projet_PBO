@@ -31,6 +31,8 @@ public class RentalConsole {
         member.tambahMember(new Member("M002", "Mr. Y", "Gold"));
         member.tambahMember(new Member("M003", "Mr. Z", "Platinum"));
         
+        System.out.println(member);
+        
         System.out.print("Masukkan ID Member \t : ");
         String id = input.nextLine();
         String jenis = member.cariJenisMember(id);
